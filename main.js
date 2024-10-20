@@ -1,10 +1,11 @@
- //get references to the HTML elements
+//get references to the HTML elements
 const sizeSelector = document.getElementById('size-selector');
 const priceDisplay = document.getElementById('price');
 const purchaseButton = document.getElementById('purchase-button');
 
 
 //TASK 2 - Add Event Listeners for Product Selection:
+
 sizeSelector.addEventListener('change', (event) => {
     const selectedOption = event.target.options[event.target.selectedIndex]; 
     //get the selected size option
@@ -18,6 +19,7 @@ sizeSelector.addEventListener('change', (event) => {
 
 
 //TASK 3 - Handle Stock Availability:
+
 if (stockStatus === 'out-of-stock') {
     purchaseButton.disabled = true; //disable the button
 } else {
@@ -26,3 +28,15 @@ if (stockStatus === 'out-of-stock') {
 });
 
 
+//TASK 4 - Create a Checkout Event:
+
+purchaseButton.addEventListener('click', () => {
+    const selectedOption = sizeSelector.options[sizeSelector.selectedIndex];
+    const stockStatus = selectedOption.getAttribute('data-stock');
+
+    if (stockStatus === 'in-stock') {
+        alert('Thank you for your purchase!');
+    } else {
+        alert('This product is currently out of stock and cannot be purchased.');
+    }
+});
