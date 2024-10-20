@@ -1,19 +1,24 @@
+ <!-- TASK 1 - Setup Product HTML Structure -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <title>Coding Challenge 10</title>
+
 </head>
 <body>
-    <h2 id="product-name">Sample Product</h2>
-    <p id="product-price">$10.00</p>
-    <label for="size-select">Choose a size:</label>
-    <select id="size-select">
-        <option value="small" data-price="10" data-stock="in">Small: In Stock</option>
-        <option value="medium" data-price="15" data-stock="in">Medium: In Stock</option>
-        <option value="large" data-price="20" data-stock="out">Large: Out of Stock</option>
+    <h2 id="product-name">Awesome Product</h2>
+    <p id="product-price">Price: $<span id="price">20.00</span></p>
+    
+    <label for="size-selector">Select Size:</label>
+    <select id="size-selector">
+        <option value="small" data-price="20.00" data-stock="in-stock">Small: In Stock</option>
+        <option value="medium" data-price="25.00" data-stock="in-stock">Medium: In Stock</option>
+        <option value="large" data-price="30.00" data-stock="out-of-stock">Large: Out of Stock</option>
     </select>
+    
     <button id="purchase-button">Purchase</button>
 
     <script src="main.js"></script>
