@@ -35,7 +35,7 @@ purchaseButton.addEventListener('click', () => {
     const stockStatus = selectedOption.getAttribute('data-stock');
 
     if (stockStatus === 'in-stock') {
-        alert('Thank you for your purchase!');
+        alert('Thank you for your purchase!!');
     } else {
         alert('This product is currently out of stock and cannot be purchased.');
     }
